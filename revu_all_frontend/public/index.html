@@ -1,10 +1,12 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="reviewboard">
   <head>
     <meta charset="utf-8">
     <title></title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular.min.js"></script>
     <script type="text/javascript" src="app.js"></script>
   </head>
-  <body>
+  <body ng-controller="mainController as ctrl">
+    {{ ctrl.message }}
   </body>
 </html>
