@@ -10,9 +10,23 @@
   <body ng-controller="mainController as ctrl">
     <header>…</header>
     <div class="container">
-       <main>…</main>
-       <nav>…</nav>
-       <aside>…</aside>
+      <main>
+       <div ng-repeat="review in ctrl.reviews" class="reviews">
+         <h3>{{ review.title }}</h3>
+         <p>{{ review.content }}<p>
+         <small>{{ review.author }}</small>
+       </div>
+      </main>
+       <nav>
+        <h4>POST A REVIEW</h4>
+        <form ng-submit="ctrl.processForm()">
+          Author: <input type="text" ng-model="ctrl.formdata.author" placeholder="author"/><br/>
+          Title: <input type="text" ng-model="ctrl.formdata.title" placeholder="title"/><br/>
+          Review: <input type="text" ng-model="ctrl.formdata.content" placeholder="content"/><br/>
+          <input class="submit" type="submit"/>
+        </form>
+      </nav>
+      <aside>…</aside>
     </div>
     <footer>…</footer>
   </body>
