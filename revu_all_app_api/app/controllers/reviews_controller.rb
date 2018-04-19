@@ -3,7 +3,7 @@ class ReviewsController < ApplicationController
 
   # GET /reviews
   def index
-    @reviews = Review.all
+    @reviews = Review.all.reverse
 
     render json: @reviews
   end
