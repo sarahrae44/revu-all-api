@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="style.css"/>
   </head>
   <body ng-controller="mainController as ctrl">
-    <header>…</header>
+    <header>Reviews for any and all</header>
     <div class="container">
       <main>
        <div ng-repeat="review in ctrl.reviews" class="reviews">
@@ -20,9 +20,12 @@
        <nav>
         <h4>POST A REVIEW</h4>
         <form ng-submit="ctrl.processForm()">
-          Author: <input type="text" ng-model="ctrl.formdata.author" placeholder="author"/><br/>
-          Title: <input type="text" ng-model="ctrl.formdata.title" placeholder="title"/><br/>
-          Review: <input type="text" ng-model="ctrl.formdata.content" placeholder="content"/><br/>
+          Author: <br/>
+          <input type="text" ng-model="ctrl.formdata.author" placeholder="author"/><br/>
+          Title: <br/>
+          <input type="text" ng-model="ctrl.formdata.title" placeholder="title"/><br/>
+          Review: <br/>
+          <textarea ng-model="ctrl.formdata.content" placeholder="content"/></textarea><br/>
           <input class="submit" type="submit"/>
         </form>
       </nav>
